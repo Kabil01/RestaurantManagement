@@ -5,7 +5,7 @@ include("database_connection.php");
 
 if(isset($_COOKIE["type"]))
 {
- header("location: ../pro/index.php");
+ header("location: ../index.php");
 }
 
 $message = '';
@@ -37,7 +37,7 @@ if(isset($_POST["login"]))
     if(password_verify($_POST["user_password"], $row["user_password"]))
     {
      setcookie("type", md5($row["user_type"]), time()+3600);
-     header("location: ../pro/index.php");
+     header("location: index.php");
     }
     else
     {

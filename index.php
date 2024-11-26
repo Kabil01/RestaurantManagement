@@ -16,7 +16,7 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
 <div class="container">
   <div class = "jumbotron mt-5 text-center">
     <h1>Restaurant</h1>
-    <p>Made with love</p>
+    <p>A Taste of Excellence in Every Bite</p>
   </div>
   <div class="card mt-5 mb-5 bg-light">
     <div class="card-header">
@@ -32,12 +32,12 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($menu as $item): ?>
           <tr>
-            <td><?= $item->DishId; ?></td>
-            <td><?= htmlspecialchars($item->Name); ?></td>
-            <td><?= htmlspecialchars($item->Price); ?></td>
+            <td><?= $item->dishid; ?></td>
+            <td><?= htmlspecialchars($item->name); ?></td>
+            <td><?= htmlspecialchars($item->price); ?></td>
             <td>
-            <a href="delete.php?dishid=<?= $item->DishId ?>" class="btn btn-danger">Delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="edit.php?dishid=<?= $item->DishId ?>" class="btn btn-success">Edit price</a></td>
+            <a href="delete.php?dishid=<?= $item->dishid ?>" class="btn btn-danger">Delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="edit.php?dishid=<?= $item->dishid ?>" class="btn btn-success">Edit price</a></td>
           </tr>
         <?php endforeach; ?>
       </table>

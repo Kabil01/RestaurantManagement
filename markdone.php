@@ -11,5 +11,5 @@ $orderid = $_GET['orderid'];
 $sql = "UPDATE orderdetails set orderstatus='Done' where orderid=:orderid";
 $statement = $connection->prepare($sql);
 if ($statement->execute([':orderid' => $orderid])) {
-  header("Location: /pro/pending.php");
+  header("Location: /pending.php");
 }

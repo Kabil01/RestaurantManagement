@@ -7,7 +7,7 @@ if(!isset($_COOKIE["type"]))
 
 
 require 'db.php';
-$sql = "SELECT S.Name, Y.NoOfOrders  from Staff S, (SELECT OrderTakenBy, COUNT (OrderTakenBy) NoOfOrders from OrderDetails group by OrderTakenBy) as Y where Y.OrderTakenBy=S.EmployeeID";
+$sql = "SELECT S.name, Y.nooforders  from staff S, (SELECT ordertakenby, COUNT (ordertakenby) nooforders from orderdetails group by ordertakenby) as Y where Y.ordertakenby=S.employeeid";
 $statement = $connection->prepare($sql);
 $statement->execute();
 $menu = $statement->fetchAll(PDO::FETCH_OBJ);
@@ -16,7 +16,7 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
 <div class="container">
   <div class = "jumbotron mt-5 text-center">
     <h1>Restaurant</h1>
-    <p>Made with love</p>
+    <p>A Taste of Excellence in Every Bite</p>
   </div>
   <div class="card mt-5 mb-5 bg-light">
     <div class="card-header">
@@ -31,8 +31,8 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($menu as $item): ?>
           <tr>
-            <td><?= htmlspecialchars($item->Name); ?></td>
-            <td><?= htmlspecialchars($item->NoOfOrders); ?></td>
+            <td><?= htmlspecialchars($item->name); ?></td>
+            <td><?= htmlspecialchars($item->nooforders); ?></td>
             
           </tr>
         <?php endforeach; ?>

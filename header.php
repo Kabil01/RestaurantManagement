@@ -9,7 +9,7 @@
   </head>
   <body class="bg-info bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="/pro">Menu Card</a>
+  <a class="navbar-brand" href="index.php">Menu Card</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,7 +17,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/pro">Menu<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Menu<span class="sr-only">(current)</span></a>
       </li>
         <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">More</a>

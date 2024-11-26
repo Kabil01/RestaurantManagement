@@ -18,7 +18,7 @@ if (isset ($_POST['name'])  && isset($_POST['price']) ) {
   $sql = 'UPDATE menu SET name=:name, price=:price WHERE dishid=:dishid';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':name' => $name, ':price' => $price, ':dishid' => $dishid])) {
-    header("Location: /pro/");
+    header("Location: index.php");
   }
 }
 
@@ -28,7 +28,7 @@ if (isset ($_POST['name'])  && isset($_POST['price']) ) {
 <div class="container">
     <div class = "jumbotron mt-5 text-center">
     <h1>Restaurant</h1>
-    <p>Made with love</p>
+    <p>A Taste of Excellence in Every Bite</p>
   </div>
   <div class="card mt-5">
     <div class="card-header">
@@ -38,11 +38,11 @@ if (isset ($_POST['name'])  && isset($_POST['price']) ) {
       <form method="post">
         <div class="form-group">
           <label for="name">Name</label>
-          <input value="<?= htmlspecialchars($item->Name); ?>" type="text" name="name" dishid="name" class="form-control">
+          <input value="<?= htmlspecialchars($item->name); ?>" type="text" name="name" dishid="name" class="form-control">
         </div>
         <div class="form-group">
           <label for="price">price</label>
-          <input type="price" value="<?= htmlspecialchars($item->Price); ?>" name="price" dishid="price" class="form-control">
+          <input type="price" value="<?= htmlspecialchars($item->price); ?>" name="price" dishid="price" class="form-control">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-info">Confirm</button>

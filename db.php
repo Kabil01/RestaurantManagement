@@ -1,7 +1,7 @@
 <?php
-$dsn = 'pgsql:host=localhost;dbname=restman';
-$username = 'neutron';
-$password = 'lolfool';
+$dsn = 'pgsql:host=localhost;dbname=restaurant';
+$username = 'postgres';
+$password = 'root';
 $options = [];
 try {
 $connection = new PDO($dsn, $username, $password, $options);

@@ -16,7 +16,7 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
 <div class="container">
   <div class = "jumbotron mt-5 text-center">
     <h1>Restaurant</h1>
-    <p>Made with love</p>
+    <p>A Taste of Excellence in Every Bite</p>
   </div>
   <div class="card mt-5 mb-5 bg-light">
     <div class="card-header">
@@ -29,7 +29,7 @@ $menu = $statement->fetchAll(PDO::FETCH_OBJ);
         </tr>
         <?php foreach($menu as $item): ?>
           <tr>
-            <td><?= htmlspecialchars($item->Name); ?></td>
+            <td><?= htmlspecialchars($item->name); ?></td>
             
           </tr>
         <?php endforeach; ?>
